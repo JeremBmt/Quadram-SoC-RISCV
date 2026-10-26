@@ -1,0 +1,19 @@
+// instructions at address 0x0
+@0
+00200093 // addi x1, x0, 2
+00400113 // addi x2, x0, 4
+00110133 // add x2, x2, x1
+001150b3 // srl x1, x2, x1
+021101b3 // mul x3, x2, x1  
+02114233 // div x4, x2, x1      
+0420a023 // sw x2, 64(x1)
+0400a283 // lw x5, 64(x1)
+40000313 // addi x6, x0, 1024  -> Charge la valeur 1024 dans x6
+00232023 // sw x2, 0(x6)       -> Écrit x2 (qui vaut 6) à l'adresse 1024 (RAM 1)
+00032383 // lw x7, 0(x6)       -> Relit l'adresse 1024 et stocke dans x7
+00100073 // ebreak
+
+
+
+
+
