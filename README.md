@@ -39,15 +39,18 @@ This project integrates a single-cycle RISC-V core with an external synchronous 
 ## Repository Structure
 
 ```text
-├── decodeur.vhd       # Address decoder for QuadRAM bank selection (VHDL)
-├── ramchip.vhd        # Synchronous RAM block with CS control (VHDL)
-├── quadram.vhd        # 4x1KB banked RAM top-level module (VHDL)
-├── riscvproc-2.v      # RV32IM processor core with load FSM (Verilog)
-├── soc_top.vhd        # Mixed-HDL top-level interconnect (VHDL)
-├── quadram_tb.vhd     # Testbench for QuadRAM memory boundary checks (VHDL)
-├── ram_tb.vhd         # Testbench for individual RAM component (VHDL)
-├── soc_top_tb.vhd     # System-level simulation testbench (VHDL)
-└── instr2.txt         # Test sequence loaded via $readmemh
+├── rtl/
+│   ├── decodeur.vhd       # Address decoder for QuadRAM bank selection (VHDL)[cite: 1, 6]
+│   ├── quadram.vhd        # 4x1KB banked RAM top-level module (VHDL)[cite: 1, 6]
+│   ├── ramchip.vhd        # Synchronous RAM block with CS control (VHDL)[cite: 1, 5]
+│   ├── riscvproc-2.v      # RV32IM processor core with load FSM (Verilog)[cite: 1, 12]
+│   └── soc_top.vhd        # Mixed-HDL top-level interconnect (VHDL)[cite: 1, 9]
+├── tb/
+│   ├── instr2.txt         # Test sequence loaded via $readmemh[cite: 1, 13]
+│   ├── quadram_tb.vhd     # Testbench for QuadRAM memory boundary checks (VHDL)[cite: 1, 6]
+│   ├── ram_tb.vhd         # Testbench for individual RAM component (VHDL)[cite: 1, 4]
+│   └── soc_top_tb.vhd     # System-level simulation testbench (VHDL)[cite: 1, 9]
+└── README.md
 ```
 
 ---
